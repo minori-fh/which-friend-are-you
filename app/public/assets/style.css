@@ -3,6 +3,7 @@ body {
 
 }
 
+/* Home Page Styling */
 #home {
     position: fixed;
     top: 50%;
@@ -22,4 +23,14 @@ body {
     margin-bottom: -50px;
     left: 50%; 
     margin-left: 307px;  
+}
+
+/* Survey Styling */
+.likert li {
+    float: left;
+    list-style-type: none;
+}
+
+.likert {
+    color: white; 
 }
