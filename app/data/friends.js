@@ -12,7 +12,7 @@ var friendsArray = [
     },
     {
     name: "Ross",
-    imageLink: "https://www.hindustantimes.com/rf/image_size_960x540/HT/p2/2018/02/10/Pictures/_0f5939de-0e55-11e8-8111-5ed3551128ed.png",
+    imageLink: "https://img.buzzfeed.com/buzzfeed-static/static/2017-06/1/6/campaign_images/buzzfeed-prod-fastlane-01/how-popular-are-your-opinions-about-ross-geller-2-14231-1496313900-8_dblbig.jpg",
     Q1: 2,
     Q2: 2,
     Q3: 2,

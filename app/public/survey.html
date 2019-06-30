@@ -140,7 +140,7 @@
         <button id = "submit">Submit</button>
     </div>
 
-    <div>
+    <div id = "results">
         <h1>Your Friends Character is...</h1>
         <h2 id = "character"></h2>
     </div>
@@ -218,6 +218,9 @@
             console.log(characterIndex)
             console.log(data[characterIndex].name)
             console.log(data[characterIndex].imageLink)
+
+            $("#character").text(data[characterIndex].name)
+            $("#results").append("<img src ='" + data[characterIndex].imageLink + "' width = '500px'>")
         });
 
     });
