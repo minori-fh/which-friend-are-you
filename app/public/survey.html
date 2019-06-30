@@ -150,6 +150,7 @@
     <script type = "text/javascript">
 
     var newSurvey;
+    var differenceArray;
 
     $("input:radio").on("click", function(){
         questionNum = $(this).attr("class")
@@ -186,8 +187,28 @@
         }
         console.log(newSurvey)
 
-        $.post("/api/surveyResults", newSurvey, function(data){
+        $.post("/api/surveyResults", newSurvey, function(){
             console.log(newSurvey)
+        });
+
+        $.get("api/surveyResults", function(data){
+
+            differenceArray = [];
+
+            for (var i = 0; i < data.length-1; i++){
+                difference = 
+                (newSurvey.Q1 - data[i].Q1) +
+                (newSurvey.Q2 - data[i].Q2) +
+                (newSurvey.Q3 - data[i].Q3) +
+                (newSurvey.Q4 - data[i].Q4) + 
+                (newSurvey.Q5 - data[i].Q5) +
+                (newSurvey.Q6 - data[i].Q6) +
+                (newSurvey.Q7 - data[i].Q7)
+
+                differenceArray.push(Math.abs(difference))
+                console.log(difference)
+            };
+            console.log(differenceArray)
         });
 
     });
