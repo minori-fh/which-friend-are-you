@@ -9,6 +9,9 @@ var friendsArray = [
     Q5: 1,
     Q6: 4,
     Q7: 3,
+    Q8: 2,
+    Q9: 1,
+    Q10: 2,
     },
     {
     name: "Ross",
@@ -20,6 +23,9 @@ var friendsArray = [
     Q5: 5,
     Q6: 3,
     Q7: 5,
+    Q8: 1,
+    Q9: 5,
+    Q10: 1,
     },
     {
     name: "Monica",
@@ -31,6 +37,9 @@ var friendsArray = [
     Q5: 5,
     Q6: 3,
     Q7: 5,
+    Q8: 1,
+    Q9: 2,
+    Q10: 1,
     },
     {
     name: "Chandler",
@@ -40,8 +49,11 @@ var friendsArray = [
     Q3: 1,
     Q4: 5,
     Q5: 3,
-    Q6: 1,
+    Q6: 2,
     Q7: 2,
+    Q8: 2,
+    Q9: 2,
+    Q10: 1,
     },
     {
     name: "Phoebe",
@@ -53,6 +65,9 @@ var friendsArray = [
     Q5: 3,
     Q6: 1,
     Q7: 1,
+    Q8: 3,
+    Q9: 2,
+    Q10: x,
     },
     {
     name: "Janice",
@@ -64,6 +79,9 @@ var friendsArray = [
     Q5: 4,
     Q6: 3,
     Q7: 3,
+    Q8: 2,
+    Q9: 2,
+    Q10: 3,
     },
     {
     name: "Joey",
@@ -75,6 +93,9 @@ var friendsArray = [
     Q5: 2,
     Q6: 5,
     Q7: 1,
+    Q8: 5,
+    Q9: 1,
+    Q10: 5,
     },
 ]
 
