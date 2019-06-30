@@ -13,9 +13,43 @@
       <!-- Link to jQuery -->
       <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 
+      <style>
+          /* Survey Styling */
+        #survey-page {
+            background-color: rgb(246, 246, 214);
+            color: black;
+            text-align: center; 
+        }
+        .likert li {
+            float: left;
+            list-style-type: none;
+            font-family: 'Poppins', sans-serif;
+        }
+        .likert {
+            color: black;
+            margin: auto 0;   
+        }
+        #survey {
+            width: 45%; 
+            background-color: white; 
+            margin: 0 auto; 
+            padding-left: 25px; 
+            padding-right: 15px; 
+            padding-bottom: 20px; 
+            padding-top: 20px; 
+            text-align: left; 
+        }
+        h1{
+            font-family: 'Permanent Marker', cursive;
+        }
+
+        h2{
+            font-family: 'Poppins', sans-serif;
+        }
+      </style>
 </head>
 <body id = "survey-page">
-    <img src = "assets/images/couch.png" id = "couch" width = "600px">
+    <img src = "./assets/images/couch.png" id = "couch" width = "600px">
 
     <div id = "survey">
 
@@ -23,11 +57,11 @@
         <h2>It's NYE in NYC, you are most likely...</h2>
         <ul class="likert">
             <li> In bed</li>
-            <li><input type="radio" class="Q1" value="1" /></li>
-            <li><input type="radio" class="Q1" value="2" /></li>
-            <li><input type="radio" class="Q1" value="3" /></li>
-            <li><input type="radio" class="Q1" value="4" /></li>
-            <li><input type="radio" class="Q1" value="5" /></li>
+            <li><input type="radio" name="Q1" class="Q1" value="1" /></li>
+            <li><input type="radio" name="Q1" class="Q1" value="2" /></li>
+            <li><input type="radio" name="Q1" class="Q1" value="3" /></li>
+            <li><input type="radio" name="Q1" class="Q1" value="4" /></li>
+            <li><input type="radio" name="Q1" class="Q1" value="5" /></li>
             <li> Partying in Times Square </li>
         </ul><br>
 
@@ -35,11 +69,11 @@
         <h2>You are the wierd one in your friend group.</h2>
         <ul class="likert">
             <li> Strongly Disagree</li>
-            <li><input type="radio" class="Q2" value="1" /></li>
-            <li><input type="radio" class="Q2" value="2" /></li>
-            <li><input type="radio" class="Q2" value="3" /></li>
-            <li><input type="radio" class="Q2" value="4" /></li>
-            <li><input type="radio" class="Q2" value="5" /></li>
+            <li><input type="radio" name="Q2" class="Q2" value="1" /></li>
+            <li><input type="radio" name="Q2" class="Q2" value="2" /></li>
+            <li><input type="radio" name="Q2" class="Q2" value="3" /></li>
+            <li><input type="radio" name="Q2" class="Q2" value="4" /></li>
+            <li><input type="radio" name="Q2" class="Q2" value="5" /></li>
             <li> Strongly Agree </li>
         </ul><br>
 
@@ -47,11 +81,11 @@
         <h2>You have a 'little bit' of OCD.</h2>
         <ul class="likert">
             <li> Strongly Disagree</li>
-            <li><input type="radio" class="Q3" value="1" /></li>
-            <li><input type="radio" class="Q3" value="2" /></li>
-            <li><input type="radio" class="Q3" value="3" /></li>
-            <li><input type="radio" class="Q3" value="4" /></li>
-            <li><input type="radio" class="Q3" value="5" /></li>
+            <li><input type="radio" name="Q3" class="Q3" value="1" /></li>
+            <li><input type="radio" name="Q3" class="Q3" value="2" /></li>
+            <li><input type="radio" name="Q3" class="Q3" value="3" /></li>
+            <li><input type="radio" name="Q3" class="Q3" value="4" /></li>
+            <li><input type="radio" name="Q3" class="Q3" value="5" /></li>
             <li> Strongly Agree </li>
         </ul><br>
 
@@ -59,11 +93,11 @@
         <h2>How do you feel about animals?</h2>
         <ul class="likert">
             <li> LOVE THEM! We shouldn't eat them. </li>
-            <li><input type="radio" class="Q4" value="1" /></li>
-            <li><input type="radio" class="Q4" value="2" /></li>
-            <li><input type="radio" class="Q4" value="3" /></li>
-            <li><input type="radio" class="Q4" value="4" /></li>
-            <li><input type="radio" class="Q4" value="5" /></li>
+            <li><input type="radio" name="Q4" class="Q4" value="1" /></li>
+            <li><input type="radio" name="Q4" class="Q4" value="2" /></li>
+            <li><input type="radio" name="Q4" class="Q4" value="3" /></li>
+            <li><input type="radio" name="Q4" class="Q4" value="4" /></li>
+            <li><input type="radio" name="Q4" class="Q4" value="5" /></li>
             <li> They taste good. </li>
         </ul><br>
 
@@ -71,11 +105,11 @@
         <h2>In an argument, what are you most likely to do?</h2>
         <ul class="likert">
             <li> Back down </li>
-            <li><input type="radio" class="Q5" value="1" /></li>
-            <li><input type="radio" class="Q5" value="2" /></li>
-            <li><input type="radio" class="Q5" value="3" /></li>
-            <li><input type="radio" class="Q5" value="4" /></li>
-            <li><input type="radio" class="Q5" value="5" /></li>
+            <li><input type="radio" name="Q5" class="Q5" value="1" /></li>
+            <li><input type="radio" name="Q5" class="Q5" value="2" /></li>
+            <li><input type="radio" name="Q5" class="Q5" value="3" /></li>
+            <li><input type="radio" name="Q5" class="Q5" value="4" /></li>
+            <li><input type="radio" name="Q5" class="Q5" value="5" /></li>
             <li> Lose your temper </li>
         </ul><br>
 
@@ -83,11 +117,11 @@
         <h2>What's your family like?</h2>
         <ul class="likert">
             <li> Small but close! </li>
-            <li><input type="radio" class="Q6" value="1" /></li>
-            <li><input type="radio" class="Q6" value="2" /></li>
-            <li><input type="radio" class="Q6" value="3" /></li>
-            <li><input type="radio" class="Q6" value="4" /></li>
-            <li><input type="radio" class="Q6" value="5" /></li>
+            <li><input type="radio" name="Q6" class="Q6" value="1" /></li>
+            <li><input type="radio" name="Q6" class="Q6" value="2" /></li>
+            <li><input type="radio" name="Q6" class="Q6" value="3" /></li>
+            <li><input type="radio" name="Q6" class="Q6" value="4" /></li>
+            <li><input type="radio" name="Q6" class="Q6" value="5" /></li>
             <li> Busy with lots of people </li>
         </ul><br>
 
@@ -95,11 +129,11 @@
         <h2>What are you like when you play games?</h2>
         <ul class="likert">
             <li> Just happy to take part! </li>
-            <li><input type="radio" class="Q7" value="1" /></li>
-            <li><input type="radio" class="Q7" value="2" /></li>
-            <li><input type="radio" class="Q7" value="3" /></li>
-            <li><input type="radio" class="Q7" value="4" /></li>
-            <li><input type="radio" class="Q7" value="5" /></li>
+            <li><input type="radio" name="Q7" class="Q7" value="1" /></li>
+            <li><input type="radio" name="Q7" class="Q7" value="2" /></li>
+            <li><input type="radio" name="Q7" class="Q7" value="3" /></li>
+            <li><input type="radio" name="Q7" class="Q7" value="4" /></li>
+            <li><input type="radio" name="Q7" class="Q7" value="5" /></li>
             <li> Super competitive </li>
         </ul><br><br><br>
 
@@ -112,7 +146,7 @@
 
     $("input:radio").on("click", function(){
         questionNum = $(this).attr("class")
-        questionVal = $(this).attr("value")
+        questionVal = parseFloat($(this).attr("value"))
 
         if (questionNum === "Q1"){
             Q1Answer = questionVal
@@ -128,8 +162,7 @@
             Q6Answer = questionVal
         } else if (questionNum === "Q7"){
             Q7Answer = questionVal
-        };
-      
+        }; 
     });
 
     $("#submit").on("click", function(event){
@@ -144,7 +177,6 @@
             Q6: Q6Answer,
             Q7: Q7Answer
         }
-
         console.log(newSurvey)
     });
     </script>

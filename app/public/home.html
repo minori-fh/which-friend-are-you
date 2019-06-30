@@ -13,16 +13,42 @@
      <!-- Link to jQuery -->
      <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 
-    <!-- Link to CSS -->
+     <style>
+        body {
+            background-color: black; 
+        }
+        
+        /* Home Page Styling */
+        #home {
+            position: fixed;
+            top: 50%;
+            left: 50%; 
+            margin-top: -310px; 
+            margin-left: -307.5px; 
+            text-align: center; 
+        }
+        
+        #title {
+            font-family: 'Permanent Marker', cursive;
+            color: white; 
+            font-size: 30px; 
+        }
+        
+        #quiz {
+            margin-bottom: -50px;
+            left: 50%; 
+            margin-left: 307px;  
+        }
+     </style>
 </head>
 <body>
 
 <!-- <img src = "assets/images/quizIcon.png" width = "100px" id = "quiz"> -->
 
 <div id = "home">
-    <img src = "assets/images/friends-cartoon.png">
+    <img src = "./assets/images/friends-cartoon.png">
     <h1 id = "title">Which Friend are You?</h1>
-    <button>Start Survey</button>
+    <a href = "/survey"><button>Start Survey</button></a>
 </div>
     
 </body>
