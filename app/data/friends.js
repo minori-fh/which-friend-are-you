@@ -67,7 +67,7 @@ var friendsArray = [
     Q7: 1,
     Q8: 3,
     Q9: 2,
-    Q10: x,
+    Q10: 5,
     },
     {
     name: "Janice",

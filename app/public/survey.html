@@ -141,11 +141,11 @@
         <h2>You often do not understand what your friends are talking about.</h2>
         <ul class="likert">
             <li> Strongly Disagree </li>
-            <li><input type="radio" name="Q7" class="Q7" value="1" /></li>
-            <li><input type="radio" name="Q7" class="Q7" value="2" /></li>
-            <li><input type="radio" name="Q7" class="Q7" value="3" /></li>
-            <li><input type="radio" name="Q7" class="Q7" value="4" /></li>
-            <li><input type="radio" name="Q7" class="Q7" value="5" /></li>
+            <li><input type="radio" name="Q8" class="Q7" value="1" /></li>
+            <li><input type="radio" name="Q8" class="Q7" value="2" /></li>
+            <li><input type="radio" name="Q8" class="Q7" value="3" /></li>
+            <li><input type="radio" name="Q8" class="Q7" value="4" /></li>
+            <li><input type="radio" name="Q8" class="Q7" value="5" /></li>
             <li> Strongly Agree </li>
         </ul><br>
 
@@ -153,11 +153,11 @@
         <h2>You're the nerd in your friend group.</h2>
         <ul class="likert">
             <li> Strongly Disagree </li>
-            <li><input type="radio" name="Q7" class="Q7" value="1" /></li>
-            <li><input type="radio" name="Q7" class="Q7" value="2" /></li>
-            <li><input type="radio" name="Q7" class="Q7" value="3" /></li>
-            <li><input type="radio" name="Q7" class="Q7" value="4" /></li>
-            <li><input type="radio" name="Q7" class="Q7" value="5" /></li>
+            <li><input type="radio" name="Q9" class="Q7" value="1" /></li>
+            <li><input type="radio" name="Q9" class="Q7" value="2" /></li>
+            <li><input type="radio" name="Q9" class="Q7" value="3" /></li>
+            <li><input type="radio" name="Q9" class="Q7" value="4" /></li>
+            <li><input type="radio" name="Q9" class="Q7" value="5" /></li>
             <li> Strongly Agree </li>
         </ul><br>
 
@@ -165,11 +165,11 @@
         <h2> How you doin ;)?</h2>
         <ul class="likert">
             <li> Strongly Disagree </li>
-            <li><input type="radio" name="Q7" class="Q7" value="1" /></li>
-            <li><input type="radio" name="Q7" class="Q7" value="2" /></li>
-            <li><input type="radio" name="Q7" class="Q7" value="3" /></li>
-            <li><input type="radio" name="Q7" class="Q7" value="4" /></li>
-            <li><input type="radio" name="Q7" class="Q7" value="5" /></li>
+            <li><input type="radio" name="Q10" class="Q7" value="1" /></li>
+            <li><input type="radio" name="Q10" class="Q7" value="2" /></li>
+            <li><input type="radio" name="Q10" class="Q7" value="3" /></li>
+            <li><input type="radio" name="Q10" class="Q7" value="4" /></li>
+            <li><input type="radio" name="Q10" class="Q7" value="5" /></li>
             <li> Strongly Agree </li>
         </ul><br><br><br>
 
@@ -240,7 +240,10 @@
                 (newSurvey.Q4 - data[i].Q4) + 
                 (newSurvey.Q5 - data[i].Q5) +
                 (newSurvey.Q6 - data[i].Q6) +
-                (newSurvey.Q7 - data[i].Q7)
+                (newSurvey.Q7 - data[i].Q7) +
+                (newSurvey.Q8 - data[i].Q8) +
+                (newSurvey.Q9 - data[i].Q9) +
+                (newSurvey.Q10 - data[i].Q10)
 
                 differenceArray.push(Math.abs(difference))
                 orderedDifference.push(Math.abs(difference))
