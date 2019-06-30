@@ -140,9 +140,16 @@
         <button id = "submit">Submit</button>
     </div>
 
+    <div>
+        <h1>Your Friends Character is...</h1>
+        <h2 id = "character"></h2>
+    </div>
+
 
     <!-- Javascript starts here -->
     <script type = "text/javascript">
+
+    var newSurvey;
 
     $("input:radio").on("click", function(){
         questionNum = $(this).attr("class")
@@ -168,7 +175,7 @@
     $("#submit").on("click", function(event){
         event.preventDefault();
 
-        var newSurvey = {
+        newSurvey = {
             Q1: Q1Answer,
             Q2: Q2Answer,
             Q3: Q3Answer,
@@ -178,10 +185,11 @@
             Q7: Q7Answer
         }
         console.log(newSurvey)
-    });
 
-    $.post("/api/surveyResults", newSurvey, function(data){
-        console.log(newSurvey)
+        $.post("/api/surveyResults", newSurvey, function(data){
+            console.log(newSurvey)
+        });
+
     });
     </script>
     

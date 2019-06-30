@@ -1,6 +1,7 @@
 var friendsArray = [
     {
     name: "Rachel",
+    imageLink: "https://www.hindustantimes.com/rf/image_size_960x540/HT/p2/2018/02/10/Pictures/_0f5939de-0e55-11e8-8111-5ed3551128ed.png",
     Q1: 1,
     Q2: 1,
     Q3: 1,
@@ -11,6 +12,7 @@ var friendsArray = [
     },
     {
     name: "Ross",
+    imageLink: "https://www.hindustantimes.com/rf/image_size_960x540/HT/p2/2018/02/10/Pictures/_0f5939de-0e55-11e8-8111-5ed3551128ed.png",
     Q1: 2,
     Q2: 2,
     Q3: 2,
@@ -21,6 +23,7 @@ var friendsArray = [
     },
     {
     name: "Monica",
+    imageLink: "https://amp.businessinsider.com/images/5c8809dc2730ca59ee05755e-750-562.jpg",
     Q1: 3,
     Q2: 3,
     Q3: 3,
@@ -31,6 +34,7 @@ var friendsArray = [
     },
     {
     name: "Chandler",
+    imageLink: "https://www.thesun.co.uk/wp-content/uploads/2016/11/01e72134-4796-4c45-8f96-85026824e580-e1479335403253.jpg",
     Q1: 4,
     Q2: 4,
     Q3: 4,
@@ -41,6 +45,7 @@ var friendsArray = [
     },
     {
     name: "Phoebe",
+    imageLink: "https://i.pinimg.com/originals/70/ba/36/70ba3603733c38c8ad3d830bb052d228.jpg",
     Q1: 5,
     Q2: 5,
     Q3: 5,
