@@ -39,11 +39,16 @@
             padding-top: 20px; 
             text-align: left; 
         }
+
+        #warning {
+            color: red; 
+        }
+
         h1{
             font-family: 'Permanent Marker', cursive;
         }
 
-        h2{
+        h2, h3{
             font-family: 'Poppins', sans-serif;
         }
       </style>
@@ -174,6 +179,7 @@
         </ul><br><br><br>
 
         <button id = "submit">Submit</button>
+        <h3 id = "warning"></h3>
     </div>
 
     <div id = "results">
@@ -188,6 +194,16 @@
     var newSurvey;
     var differenceArray;
     var orderedDifference;
+    var Q1Answer; 
+    var Q2Answer;
+    var Q3Answer;
+    var Q4Answer;
+    var Q5Answer;
+    var Q6Answer;
+    var Q7Answer;
+    var Q8Answer;
+    var Q9Answer;
+    var Q10Answer;
 
     $("input:radio").on("click", function(){
         questionNum = $(this).attr("class")
@@ -219,59 +235,63 @@
     $("#submit").on("click", function(event){
         event.preventDefault();
 
-        newSurvey = {
-            Q1: Q1Answer,
-            Q2: Q2Answer,
-            Q3: Q3Answer,
-            Q4: Q4Answer,
-            Q5: Q5Answer,
-            Q6: Q6Answer,
-            Q7: Q7Answer,
-            Q8: Q8Answer,
-            Q9: Q9Answer,
-            Q10: Q10Answer,
-
-        }
-        console.log(newSurvey)
-
-        $.post("/api/surveyResults", newSurvey, function(){
+        if (!Q1Answer || !Q2Answer || !Q3Answer || !Q4Answer || !Q5Answer || !Q6Answer || !Q7Answer || !Q8Answer || !Q9Answer || !Q10Answer){
+            $("#warning").text("Please answer all questions!")
+            console.log("fuck")
+        } else {
+            $("#warning").text("")
+            newSurvey = {
+                Q1: Q1Answer,
+                Q2: Q2Answer,
+                Q3: Q3Answer,
+                Q4: Q4Answer,
+                Q5: Q5Answer,
+                Q6: Q6Answer,
+                Q7: Q7Answer,
+                Q8: Q8Answer,
+                Q9: Q9Answer,
+                Q10: Q10Answer,
+    
+            }
             console.log(newSurvey)
-        });
-
-        $.get("api/surveyResults", function(data){
-            differenceArray = [];
-            orderedDifference = [];
-
-            for (var i = 0; i < data.length-1; i++){
-                difference = 
-                (newSurvey.Q1 - data[i].Q1) +
-                (newSurvey.Q2 - data[i].Q2) +
-                (newSurvey.Q3 - data[i].Q3) +
-                (newSurvey.Q4 - data[i].Q4) + 
-                (newSurvey.Q5 - data[i].Q5) +
-                (newSurvey.Q6 - data[i].Q6) +
-                (newSurvey.Q7 - data[i].Q7) +
-                (newSurvey.Q8 - data[i].Q8) +
-                (newSurvey.Q9 - data[i].Q9) +
-                (newSurvey.Q10 - data[i].Q10)
-
-                differenceArray.push(Math.abs(difference))
-                orderedDifference.push(Math.abs(difference))
-        
-            };
-
-            orderedDifference.sort(function(a, b) { return a - b });
-            console.log(differenceArray)
-            console.log(orderedDifference)
-            characterIndex = differenceArray.indexOf(orderedDifference[0])
-            console.log(characterIndex)
-            console.log(data[characterIndex].name)
-            console.log(data[characterIndex].imageLink)
-
-            $("#character").text(data[characterIndex].name)
-            $("#results").append("<img src ='" + data[characterIndex].imageLink + "' width = '500px'>")
-        });
-
+    
+            $.post("/api/surveyResults", newSurvey, function(){
+                console.log(newSurvey)
+            });
+    
+            $.get("api/surveyResults", function(data){
+                differenceArray = [];
+                orderedDifference = [];
+    
+                for (var i = 0; i < data.length-1; i++){
+                    difference = 
+                    (newSurvey.Q1 - data[i].Q1) +
+                    (newSurvey.Q2 - data[i].Q2) +
+                    (newSurvey.Q3 - data[i].Q3) +
+                    (newSurvey.Q4 - data[i].Q4) + 
+                    (newSurvey.Q5 - data[i].Q5) +
+                    (newSurvey.Q6 - data[i].Q6) +
+                    (newSurvey.Q7 - data[i].Q7) +
+                    (newSurvey.Q8 - data[i].Q8) +
+                    (newSurvey.Q9 - data[i].Q9) +
+                    (newSurvey.Q10 - data[i].Q10)
+    
+                    differenceArray.push(Math.abs(difference))
+                    orderedDifference.push(Math.abs(difference))
+                };
+    
+                orderedDifference.sort(function(a, b) { return a - b });
+                console.log(differenceArray)
+                console.log(orderedDifference)
+                characterIndex = differenceArray.indexOf(orderedDifference[0])
+                console.log(characterIndex)
+                console.log(data[characterIndex].name)
+                console.log(data[characterIndex].imageLink)
+    
+                $("#character").text(data[characterIndex].name)
+                $("#results").append("<img src ='" + data[characterIndex].imageLink + "' width = '500px'>")
+            });
+        };
     });
     </script>
     
