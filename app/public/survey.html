@@ -141,11 +141,11 @@
         <h2>You often do not understand what your friends are talking about.</h2>
         <ul class="likert">
             <li> Strongly Disagree </li>
-            <li><input type="radio" name="Q8" class="Q7" value="1" /></li>
-            <li><input type="radio" name="Q8" class="Q7" value="2" /></li>
-            <li><input type="radio" name="Q8" class="Q7" value="3" /></li>
-            <li><input type="radio" name="Q8" class="Q7" value="4" /></li>
-            <li><input type="radio" name="Q8" class="Q7" value="5" /></li>
+            <li><input type="radio" name="Q8" class="Q8" value="1" /></li>
+            <li><input type="radio" name="Q8" class="Q8" value="2" /></li>
+            <li><input type="radio" name="Q8" class="Q8" value="3" /></li>
+            <li><input type="radio" name="Q8" class="Q8" value="4" /></li>
+            <li><input type="radio" name="Q8" class="Q8" value="5" /></li>
             <li> Strongly Agree </li>
         </ul><br>
 
@@ -153,11 +153,11 @@
         <h2>You're the nerd in your friend group.</h2>
         <ul class="likert">
             <li> Strongly Disagree </li>
-            <li><input type="radio" name="Q9" class="Q7" value="1" /></li>
-            <li><input type="radio" name="Q9" class="Q7" value="2" /></li>
-            <li><input type="radio" name="Q9" class="Q7" value="3" /></li>
-            <li><input type="radio" name="Q9" class="Q7" value="4" /></li>
-            <li><input type="radio" name="Q9" class="Q7" value="5" /></li>
+            <li><input type="radio" name="Q9" class="Q9" value="1" /></li>
+            <li><input type="radio" name="Q9" class="Q9" value="2" /></li>
+            <li><input type="radio" name="Q9" class="Q9" value="3" /></li>
+            <li><input type="radio" name="Q9" class="Q9" value="4" /></li>
+            <li><input type="radio" name="Q9" class="Q9" value="5" /></li>
             <li> Strongly Agree </li>
         </ul><br>
 
@@ -165,11 +165,11 @@
         <h2> How you doin ;)?</h2>
         <ul class="likert">
             <li> Strongly Disagree </li>
-            <li><input type="radio" name="Q10" class="Q7" value="1" /></li>
-            <li><input type="radio" name="Q10" class="Q7" value="2" /></li>
-            <li><input type="radio" name="Q10" class="Q7" value="3" /></li>
-            <li><input type="radio" name="Q10" class="Q7" value="4" /></li>
-            <li><input type="radio" name="Q10" class="Q7" value="5" /></li>
+            <li><input type="radio" name="Q10" class="Q10" value="1" /></li>
+            <li><input type="radio" name="Q10" class="Q10" value="2" /></li>
+            <li><input type="radio" name="Q10" class="Q10" value="3" /></li>
+            <li><input type="radio" name="Q10" class="Q10" value="4" /></li>
+            <li><input type="radio" name="Q10" class="Q10" value="5" /></li>
             <li> Strongly Agree </li>
         </ul><br><br><br>
 
@@ -207,7 +207,13 @@
             Q6Answer = questionVal
         } else if (questionNum === "Q7"){
             Q7Answer = questionVal
-        }; 
+        } else if (questionNum === "Q8"){
+            Q8Answer = questionVal
+        } else if (questionNum === "Q9"){
+            Q9Answer = questionVal
+        } else if (questionNum === "Q10"){
+            Q10Answer = questionVal
+        };
     });
 
     $("#submit").on("click", function(event){
@@ -220,7 +226,11 @@
             Q4: Q4Answer,
             Q5: Q5Answer,
             Q6: Q6Answer,
-            Q7: Q7Answer
+            Q7: Q7Answer,
+            Q8: Q8Answer,
+            Q9: Q9Answer,
+            Q10: Q10Answer,
+
         }
         console.log(newSurvey)
 
