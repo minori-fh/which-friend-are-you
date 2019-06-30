@@ -151,6 +151,7 @@
 
     var newSurvey;
     var differenceArray;
+    var orderedDifference;
 
     $("input:radio").on("click", function(){
         questionNum = $(this).attr("class")
@@ -192,8 +193,8 @@
         });
 
         $.get("api/surveyResults", function(data){
-
             differenceArray = [];
+            orderedDifference = [];
 
             for (var i = 0; i < data.length-1; i++){
                 difference = 
@@ -206,9 +207,17 @@
                 (newSurvey.Q7 - data[i].Q7)
 
                 differenceArray.push(Math.abs(difference))
-                console.log(difference)
+                orderedDifference.push(Math.abs(difference))
+        
             };
+
+            orderedDifference.sort(function(a, b) { return a - b });
             console.log(differenceArray)
+            console.log(orderedDifference)
+            characterIndex = differenceArray.indexOf(orderedDifference[0])
+            console.log(characterIndex)
+            console.log(data[characterIndex].name)
+            console.log(data[characterIndex].imageLink)
         });
 
     });
