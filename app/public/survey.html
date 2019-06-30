@@ -179,6 +179,10 @@
         }
         console.log(newSurvey)
     });
+
+    $.post("/api/surveyResults", newSurvey, function(data){
+        console.log(newSurvey)
+    });
     </script>
     
 </body>
