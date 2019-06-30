@@ -26,15 +26,38 @@ body {
 }
 
 /* Survey Styling */
+#survey-page {
+    background-color: rgb(246, 246, 214);
+    color: black;
+    text-align: center; 
+}
+
 .likert li {
     float: left;
     list-style-type: none;
+    font-family: 'Poppins', sans-serif;
 }
 
 .likert {
-    color: white; 
+    color: black;
+    margin: auto 0;   
 }
 
 #survey {
-    color: white; 
+    width: 45%; 
+    background-color: white; 
+    margin: 0 auto; 
+    padding-left: 25px; 
+    padding-right: 15px; 
+    padding-bottom: 20px; 
+    padding-top: 20px; 
+    text-align: left; 
+}
+
+h1{
+    font-family: 'Permanent Marker', cursive;
+}
+
+h2{
+    font-family: 'Poppins', sans-serif;
 }
