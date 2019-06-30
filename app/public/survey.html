@@ -185,6 +185,8 @@
     <div id = "results">
         <h1>Your Friends Character is...</h1>
         <h2 id = "character"></h2>
+        <img id = "characterImage" width = "500px"><br>
+        <button id = "clear">Clear Survey</button>
     </div>
 
 
@@ -289,9 +291,17 @@
                 console.log(data[characterIndex].imageLink)
     
                 $("#character").text(data[characterIndex].name)
-                $("#results").append("<img src ='" + data[characterIndex].imageLink + "' width = '500px'>")
+                $("#characterImage").attr("src", data[characterIndex].imageLink)
             });
         };
+    });
+
+    $("#clear").on("click", function(){
+        // clear radio button inputs
+        $("input:radio").prop("checked",null)
+
+        $("#character").text("")
+        $("#characterImage").attr("src", "")
     });
     </script>
     
