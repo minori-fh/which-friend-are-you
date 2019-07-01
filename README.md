@@ -5,11 +5,11 @@ Similar to a Buzzfeed quiz, this quiz allows users to answer a series of 10 ques
 
 ## Pictures of Site
 Initial page: 
-![Site Screenshot](assets/images/site1.png)
+![Site Screenshot](public/assets/images/site1.png)
 Survey page: 
-![Site Screenshot](assets/images/site2.png)
+![Site Screenshot](public/assets/images/site2.png)
 Survey result: 
-![Site Screenshot](assets/images/site3.png)
+![Site Screenshot](public/assets/images/site3.png)
 
 [Click here to visit site](https://which-friend-are-you.herokuapp.com/)
 
