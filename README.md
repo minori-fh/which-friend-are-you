@@ -1,7 +1,7 @@
 # which-friend-are-you
 
 ## Site Description
-Similar to a Buzzfeed quiz, this quiz allows users to answer a series of 10 questions and will return a character from the TV show Friends that they are most similar to! 
+Similar to a Buzzfeed quiz, this quiz allows users to answer a series of 10 questions and will return a character from the TV show Friends that he or she is most similar to! 
 
 ## Pictures of Site
 Initial page: 
